@@ -66,7 +66,7 @@ class Invoice(models.Model):
         except Exception as e:
             print(f"Trust score calculation error: {e}")
         
-        # 2. Invoice Amount Flagging
+        # Invoice Amount Flagging
         merchant_stats = self.objects.calculate_merchant_invoice_statistics(self.merchant)
         
         if merchant_stats:
